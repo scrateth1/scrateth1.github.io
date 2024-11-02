@@ -1,0 +1,880 @@
+@import url('https://fonts.cdnfonts.com/css/spray-letters');
+
+
+
+/* Container to hold the sliding text */
+.slide-container {
+    position: relative;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+}
+
+/* Text to slide in a cyclic manner */
+.slide-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide 15s linear infinite;
+    font-family: 'Spray Letters', sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+/* Keyframes to move text in a loop */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Duplicating the text for seamless effect */
+.slide-container .inner {
+    display: flex;
+}
+
+/* Style the modal (background overlay) */
+#entryModal {
+    font-family: 'Spray Letters', sans-serif;
+    position: fixed;
+    z-index: 999;
+    /* Overlay everything */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    /* Black background with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the modal content */
+.modal-content {
+    font-family: 'Spray Letters', sans-serif;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Button style */
+.enter-button {
+    font-family: 'Spray Letters', sans-serif;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.enter-button:hover {
+    background-color: #8a6600;
+}
+
+.tokenomics-card .pawtokenomics {
+    display: block;
+    top: 3%;
+    right: 3%;
+    position: absolute;
+    width: 75px;
+    animation: rotate 10s linear infinite;
+    /* Continuous rotation */
+
+}
+
+.tokenomics-card .pawtokenomics2 {
+    display: block;
+    top: 3%;
+    right: 3%;
+    position: absolute;
+    width: 75px;
+    animation: rotate2 10s linear infinite;
+    /* Continuous rotation */
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+        /* Start at 0 degrees */
+    }
+
+    to {
+        transform: rotate(360deg);
+        /* Rotate to 360 degrees */
+    }
+}
+
+
+@keyframes rotate2 {
+    from {
+        transform: rotate(0deg);
+        /* Start at 0 degrees */
+    }
+
+    to {
+        transform: rotate(-360deg);
+        /* Rotate to 360 degrees */
+    }
+}
+
+.tokenomic_img {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    border-radius: 100px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    bottom: 0;
+}
+
+/* Keyframe for sliding from the left */
+@keyframes slide-left {
+    0% {
+        transform: translateX(-150px);
+        /* Starting offscreen */
+        opacity: 0;
+        /* Invisible */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Moves into position */
+        opacity: 1;
+        /* Fully visible */
+    }
+}
+
+/* Keyframe for sliding from the right */
+@keyframes slide-right {
+    0% {
+        transform: translateX(150px);
+        /* Starting offscreen */
+        opacity: 0;
+        /* Invisible */
+    }
+
+    100% {
+        transform: translateX(0px);
+        /* Moves into position */
+        opacity: 1;
+        /* Fully visible */
+    }
+}
+
+.paw {
+    top: 3%;
+    left: 10%;
+    position: absolute;
+    width: 100px;
+    animation: slide-left 2s ease-out forwards;
+
+}
+
+.paw2 {
+    top: 3%;
+    right: 10%;
+    position: absolute;
+    width: 100px;
+    animation: slide-right 2s ease-out forwards;
+}
+
+
+.pawwelcome {
+    top: 3%;
+    left: 10%;
+    position: absolute;
+    width: 100px;
+    animation: slide-left 2s ease-out forwards;
+    z-index: -1;
+
+}
+
+.pawwelcome2 {
+    z-index: -1;
+    top: 32%;
+    right: 10%;
+    position: absolute;
+    width: 100px;
+    animation: slide-right 2s ease-out forwards;
+}
+
+@keyframes grayscaleani {
+    0% {
+        filter: brightness(50%);
+    }
+
+    50% {
+        filter: brightness(100%);
+    }
+
+    100% {
+        filter: brightness(50%);
+    }
+}
+
+body {
+    font-family: 'Spray Letters', sans-serif;
+    background-color: #827564;
+    background-size: contain;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18%;
+    margin-right: auto;
+}
+
+.exp {
+    margin-top: -5%;
+    margin-left: -22%;
+}
+
+.exp h2 {
+    margin-left: -42.5%;
+    margin-bottom: -1%;
+    font-weight: 100;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(30px);
+        /* Start 100px below the final position */
+        opacity: 0;
+        /* Invisible */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Final position */
+        opacity: 1;
+        /* Fully visible */
+    }
+}
+
+.copycontract {
+    font-family: 'Spray Letters', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-style: solid;
+    width: fit-content;
+    border-radius: 12px;
+    margin-top: 1%;
+    padding: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgba(0, 0, 0, 0.439);
+    border-style: double;
+    border-color: #FF7828;
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d2b6f4", endColorstr="#ffffff", GradientType=1);
+
+}
+
+.copybutton {
+    font-family: 'Spray Letters', sans-serif;
+    margin: 5px;
+    border-radius: 10px;
+    font-weight: 100;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    color: #FF7828;
+    background-color: #000000;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    padding-bottom: 0;
+    padding-top: 8px;
+}
+
+.address {
+    font-size: 20px;
+}
+
+.copybutton:hover {
+    border-color: black;
+    color: black;
+    background-color: white;
+}
+.mobiletopic{
+    display: none; 
+}
+h1 {
+    color: #FF7828;
+    font-size: 75px;
+    font-family: 'Spray Letters', sans-serif;
+    text-align: center;
+    font-weight: 100;
+    /* text-decoration: underline;
+    text-decoration-color: #ddff00; */
+
+    /* Start as invisible */
+}
+
+header .main_logo {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 325px;
+    border-radius: 250px;
+    border-style: double;
+    border-width: 5px;
+    /* border-color: rgb(255, 255, 255); */
+    background-color: rgba(0, 0, 0, 0.462);
+    /* animation: rainbow 1s linear infinite; */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition effect */
+}
+
+header .main_logo:hover {
+    transform: rotate(10deg);
+    /* Rotate image by 10 degrees on hover */
+}
+
+header p {
+    background-color: #00000073;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #FF7828;
+    border-style: solid;
+}
+
+section p {
+    color: white;
+    font-family: 'Spray Letters', sans-serif;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+section h2 {
+    color: white;
+    font-family: 'Spray Letters', sans-serif;
+    font-size: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 100;
+}
+
+
+
+section .socials {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0);
+    text-decoration: none;
+    text-emphasis: none;
+    margin-top: -3%;
+
+}
+
+section a {
+    text-decoration: none;
+}
+
+footer p {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 0%;
+    padding: 10px;
+}
+
+/* Container for tokenomics section */
+#tokenomics {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #f8f9fa00;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #827564;
+    background-size: contain;
+}
+
+#tokenomics h2 {
+    font-size: 55px;
+    font-weight: 100;
+    margin-bottom: 40px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+@keyframes rainbow {
+    0% {
+        border-color: red;
+    }
+
+    14% {
+        border-color: orange;
+    }
+
+    28% {
+        border-color: yellow;
+    }
+
+    42% {
+        border-color: green;
+    }
+
+    57% {
+        border-color: blue;
+    }
+
+    71% {
+        border-color: indigo;
+    }
+
+    85% {
+        border-color: violet;
+    }
+
+    100% {
+        border-color: red;
+    }
+
+    /* Loop back to red */
+}
+
+@keyframes rainbowtext {
+    0% {
+        color: red;
+    }
+
+    14% {
+        color: orange;
+    }
+
+    28% {
+        color: yellow;
+    }
+
+    42% {
+        color: green;
+    }
+
+    57% {
+        color: blue;
+    }
+
+    71% {
+        color: indigo;
+    }
+
+    85% {
+        color: violet;
+    }
+
+    100% {
+        color: red;
+    }
+
+    /* Loop back to red */
+}
+.expmobile{
+    display: none;
+}
+.rainbow {
+    /* Animation with duration and timing */
+
+}
+
+.tokenomics-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto;
+    font-family: 'Spray Letters', sans-serif;
+    background-color: #1b1b1ba0;
+    border-radius: 30px;
+    padding: 15px;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+    border-color: #FF7828;
+    /* Animation with duration and timing */
+
+}
+
+@keyframes hover {
+    0% {
+        filter: brightness(50%);
+        transform: translateY(-10px);
+    }
+
+    50% {
+        filter: brightness(100%);
+        transform: translateY(0px);
+    }
+
+    100% {
+        filter: brightness(50%);
+        transform: translateY(-10px);
+    }
+}
+
+
+.hover_link {
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.hover_link:hover {
+    transform: translateY(-15px);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.rotate_hover:hover {
+    animation: rotate 3s linear infinite;
+}
+
+.tokenomics-card {
+    background-color: #0000006b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 15px;
+    width: 250px;
+    text-align: left;
+    border-color: rgba(255, 255, 255, 0.801);
+    border-style: solid;
+    filter: brightness(100%);
+    transform: translateY(0px);
+}
+
+.tokenomics-card:hover {
+    animation: hover 2s linear infinite;
+    background-color: #000000;
+}
+
+.tokenomics-card h3 {
+    font-size: 35px;
+    font-weight: 100;
+    color: #ffdf86;
+    margin-bottom: 15px;
+}
+
+.tokenomics-card p {
+    font-size: 25px;
+    line-height: 1.6;
+    color: #ffffff;
+    width: 100%;
+}
+
+.tokenomics-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.tokenomics-card ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.tokenomics-card ul li:before {
+    content: '•';
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+}
+
+.wiki {
+    width: 110px;
+    margin-left: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .tokenomics-cards {
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+    }
+
+    .tokenomics-card {
+        width: auto;
+    }
+}
+
+
+
+#gallery {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 60px 0;
+    background-color: #f4f4f400;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 55px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-item {
+    flex: 1 1 200px;
+    margin: 15px;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.image-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-style: solid;
+    border-width: 3px;
+    border-color: #FF7828;
+    filter: grayscale(100%);
+    transition: transform 0.6s ease-in-out;
+    /* Smooth transition effect */
+}
+
+.image-item img:hover {
+    filter: grayscale(0%);
+    transform: translateY(-10px);
+    
+
+}
+
+.color img {
+    filter: grayscale(0%);
+    transform: translateY(-10px);
+}
+
+@keyframes rotatehue {
+    0% {
+        filter: hue-rotate(360deg);
+    }
+
+    50% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+section .money {
+
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100%;
+    /* Set a height if needed */
+    animation: rotatehue 4s linear infinite;
+
+}
+
+section .money2 {
+    max-width: 100%;
+    /* Ensure image is responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .image-item {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.socials_mobile {
+    display: none;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width:1000px) {
+    .desktoptopic{
+        display: none;
+    }
+    header .main_logo {
+        margin-bottom: 6%;
+    }
+    body {
+        font-family: 'Spray Letters', sans-serif;
+        background-color: #827564;
+        background-size: 250%;
+    }
+    h1 {
+        color: white;
+        font-size: 30px;
+        font-family: 'Spray Letters', sans-serif;
+        text-align: center;
+    }
+
+    .welcome,
+    .paw2, .paw{
+        display: none;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    section {
+        margin-top: 0%;
+    }
+
+    section p {
+        color: white;
+        font-family: 'Spray Letters', sans-serif;
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+
+    .socials_mobile {
+        display: block;
+    }
+
+    .wiki {
+        width: 80px;
+        margin-left: 10px;
+    }
+
+    .exp {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .copycontract {
+        font-family: 'Spray Letters', sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        border-style: solid;
+        width: fit-content;
+        border-radius: 12px;
+        margin-top: 5%;
+        padding: 15px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        background-color: rgba(0, 0, 0, 0.439);
+        border-style: double;
+        border-color: #FF7828;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d2b6f4", endColorstr="#ffffff", GradientType=1);
+
+    }
+
+    .copybutton {
+        font-family: 'Spray Letters', sans-serif;
+        margin: 5px;
+        border-radius: 10px;
+        font-weight: 100;
+        border-style: solid;
+        border-color: rgb(255, 255, 255);
+        color: #FF7828;
+        background-color: #000000;
+        cursor: pointer;
+        font-size: 20px;
+        padding-bottom: 0;
+        padding-top: 5px;
+    }
+    .address {
+        font-size: 13px;
+    }
+    .slide-container {
+        position: relative;
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 0%;
+    }
+    .tokenomics{
+        margin-top: 0%;
+    }
+    #tokenomics {
+        width: 100%;
+        padding: 60px 0;
+        background-color: #f8f9fa00;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        background-color: #827564;
+        background-size: 250%;
+    }
+    .mobiletopic{
+        display: block;
+        font-size: 50px;
+        color: #FF7828ff;
+    }
+    section h2 {
+        color: white;
+        font-family: 'Spray Letters', sans-serif;
+        font-size: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    #gallery h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+        color: #ffffff;
+        font-weight: 100;
+    }
+    #tokenomics h2 {
+        font-size: 40px;
+        font-weight: 100;
+        margin-bottom: 40px;
+        color: #ffffff;
+        letter-spacing: 1px;
+    }
+}
