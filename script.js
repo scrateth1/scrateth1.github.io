@@ -34,7 +34,7 @@ window.onload = function () {
 
 function copyFunction() {
     // Copy the text inside the text field
-    navigator.clipboard.writeText("0x07E33Ebe6218b60A8fb58e2B310114779b5D1b6D");
+    navigator.clipboard.writeText("0x5c5642A7fd4ab3445E73D419921AE3Ef3866Aa98");
 
     // Alert the copied text
     //alertTimeout("Copied Ca", 1000)
